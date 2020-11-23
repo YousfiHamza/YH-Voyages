@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+import MyForm from "./components/MyForm/MyForm.component.jsx";
+import Header from "./components/Header/Header.component.jsx";
+import Infos from "./components/Infos/Infos.component.jsx";
+
+const HTitle = "Voyagez en train et en bus, en France, en Europe";
+const HSubtitle =
+  "Comparez les tarifs en un clin d'œil et achetez vos billets au meilleur prix";
+
+function LocationsForm() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App text-white row d-flex justify-content-center align-items-start"
+      data-test="AppWrapper"
+    >
+      <Header title={HTitle} subTitle={HSubtitle} />
+      <MyForm />
+      <Infos />
     </div>
   );
 }
 
-export default App;
+export default LocationsForm;
